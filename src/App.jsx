@@ -1,17 +1,29 @@
 
+import { Suspense } from 'react';
 import './App.css'
 import Navbar from './componente/Navbar'
-import Bannar from './componente/Page/Bannar.jsx'
+import TicketeContainar from './componente/Page/TicketeContainar'
+
+
+
+
+const loadTikete =() => fetch("/Tickete.json").then((res) => res.json())
+
+
+
+
 
 function App() {
   
-
+const tiketePromice = loadTikete();
   return (
     <>
         <Navbar></Navbar>
-    <div className="max-w-[1176px] mx-auto">
+    <div className="w-14/15 mx-auto">
 
-    <Bannar></Bannar>
+   <Suspense fallback ={"loading.........."}>
+    <TicketeContainar promise = {tiketePromice}></TicketeContainar>
+    </Suspense>
    </div>
     </>
   )
