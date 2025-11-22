@@ -4,6 +4,7 @@ import './App.css'
 import Navbar from './componente/Navbar'
 import TicketeContainar from './componente/Page/TicketeContainar'
 import Footer from './componente/Footer';
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -27,6 +28,8 @@ const tiketePromice = loadTikete();
     </Suspense>
 
     <Footer></Footer>
+  <ToastContainer>
+    </ToastContainer>
    </div>
     </>
   )

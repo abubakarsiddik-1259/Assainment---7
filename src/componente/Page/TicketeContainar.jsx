@@ -3,6 +3,7 @@ import Bannar from "./Bannar.Jsx";
 import TiketeCart from "./TiketeCart";
 import TaskStaus from "./TaskStaus";
 import ResolvedTask from "./ResolvedTask";
+import { toast } from "react-toastify";
 
 const TicketeContainar = ({ promise }) => {
   const data = use(promise);
@@ -18,13 +19,14 @@ const TicketeContainar = ({ promise }) => {
     const isExist = tiketeCategory.find((category) => category.id == buy.id);
 
     if (isExist) {
-      alert("hiiiiiii");
+    toast.error("Alredy have a Tikate")
       return;
     }
 
     const newTiketeCategory = [...tiketeCategory, buy];
 
     setTiketeCategory(newTiketeCategory);
+    toast.success("In Progress!")
   };
 
   // hendleCooking
@@ -40,6 +42,7 @@ const TicketeContainar = ({ promise }) => {
     const remaingOrder = tikete.filter((item) => item.id !== buy.id);
 
     setTicate(remaingOrder);
+     toast.success("Completed!")
   };
 
   return (
