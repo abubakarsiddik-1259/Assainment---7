@@ -3,6 +3,7 @@ import { Suspense } from 'react';
 import './App.css'
 import Navbar from './componente/Navbar'
 import TicketeContainar from './componente/Page/TicketeContainar'
+import Footer from './componente/Footer';
 
 
 
@@ -24,6 +25,8 @@ const tiketePromice = loadTikete();
    <Suspense fallback ={"loading.........."}>
     <TicketeContainar promise = {tiketePromice}></TicketeContainar>
     </Suspense>
+
+    <Footer></Footer>
    </div>
     </>
   )
