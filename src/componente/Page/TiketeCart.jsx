@@ -9,12 +9,12 @@ import React from 'react';
 const TiketeCart = ({tikete, handletikete}) => {
 
 
-    return <div className=" mx-2">
+    return <div className=" w-full mx-2">
 
-   <div onClick={()=> handletikete(tikete)} className="card card-btikete bg-[#FFFFFF] h-auto w-auto btikete-0 ">
+   <div onClick={()=> handletikete(tikete)} className="card card-btikete bg-[#FFFFFF] h-35 w-auto btikete-0  ">
 
-  <div className="card-body">
-    <div className="flex  font-semibold justify-between items-center">
+  <div className="card-body  ">
+    <div className="flex  font-semibold justify-between items-center ">
        <h2 className="card-title text-[15px] font-medium text-[#001931]">{tikete.title}</h2>
 
        <span className={`text-[#627382] px-5 py-1  rounded-full  ${tikete.status == "Open" ? "bg-[#02A53B]" : "bg-yellow-200" }`}>

@@ -53,16 +53,16 @@ const TicketeContainar = ({ promise }) => {
         readyTikite={readyTikite.length}
       ></Bannar>
 
-      <main className=" mx-auto py-10 grid  grid-cols-7 gap-5 ">
+      <main className=" mx-auto py-10 grid  lg:grid-cols-7 md:grid-cols-7  gap-5 ">
         {/* .... 11 Site ......  */}
 
-        <div className="col-span-5">
+        <div className="md:col-span-4 lg:col-span-5">
           <h2 className="font-semibold text-3xl mb-4 text-gray-600">
             Customer Tickets
           </h2>
           <div
-            className="space-y-5
-                 lg:grid grid-cols-2"
+            className="space-y-3
+                 grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-4 "
           >
             {tikete.map((tikateItem) => (
               <TiketeCart
@@ -76,14 +76,14 @@ const TicketeContainar = ({ promise }) => {
 
         {/* ......222 Site .....  */}
 
-        <div className="col-span-2 m-4">
-          <div className="">
-            <h2 className="font-semibold text-3xl text-[#34485A] mb-2">
-              {" "}
+        <div className="lg:col-span-2 md:col-span-3 m-4  w-full">
+          <div className="w-full ">
+            <h2 className="font-semibold text-3xl text-[#34485A] mb-2 ">
+           
               Task Status
             </h2>
 
-            <div className="">
+            <div className="w-full ">
               {tiketeCategory.length > 0 ? (
                 tiketeCategory.map((tiketeorder) => (
                   <TaskStaus

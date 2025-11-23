@@ -7,9 +7,9 @@ import React from 'react';
 const TaskStaus = ({tiketeorder,handleCart}) => {
     return (
        
-       <div className="card bg-[#FFFFFF]  
-        w-auto mb-4 mt-2">
-  <div className="card-body">
+       <div className="card  bg-[#FFFFFF]  
+         mb-4 mt-2">
+  <div className="card-body  ">
     <h2 className="text-[#001931]">{tiketeorder.title}</h2>
     
     <div className="card-actions ju">
